@@ -30,7 +30,7 @@ function userService() {
                 favorite: false
             }
      ];
-     fac.getData = function () {
+     fac.getShows = function () {
          return data;
      }
      return fac; 

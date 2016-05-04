@@ -1,7 +1,11 @@
-<div class = "home-frame">
-    at the home  page
-</div>
-heeeeeeeeeeeeeeeeeeeeej
-<ul>
-    <li ng-repeat="show in home.shows">{{show.title}}</li>
+    <h1>{{main.title}}</h1>
+    <div class="input-group">
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-search"></span>
+        </span>
+        <input type="text" class="form-control" ng-model="home.searchInput">
+    </div>
+   <h3>A list of TV shows</h3>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="show in home.shows | filter:home.searchInput"><span class="glyphicon glyphicon-star" ng-if="show.favorite"></span> {{show.title}} <span class="badge">{{show.year}}</span></li>
 </ul>
