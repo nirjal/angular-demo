@@ -1,9 +1,10 @@
-angular.module('app.core').controller("MainController", function(){
+angular.module('app.core').controller('HomeController',function(){
     var vm = this;   
     vm.firstName = "Nirjal";
     vm.lastName = "Khadka";    
     vm.title = 'Nirjals angular app';
-    vm.searchInput = '';    
+    vm.searchInput = '';
+    console.log('nu är vi i home controller');
   
     vm.shows = [
         {
@@ -31,5 +32,5 @@ angular.module('app.core').controller("MainController", function(){
             year: 2005,
             favorite: false
         }
-    ];      
+    ];
 });

@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <title>AngularJS Tutorial</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+    
+    <!-- Assets-->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    
+    <!-- MODULES -->
+    <script src="app.routes.js"></script>
     <script src="app.js"></script>
-    <script src="main.ctrl.js"></script>   
+    <script src="app.core.js"></script>
+    <script src="app.services.js"></script>
+    
+     
+    <script src="main.ctrl.js"></script>
+    <script src="sections/home/home.ctrl.js"></script> 
+    
+    <!-- SERVICES -->
+    <script src="services/user.svc.js"></script>
+   
     
 </head>
-<body data-ng-app="myApp" ng-controller="MainController as main">
-    <div class="container">
-        <h1>{{main.title}}</h1>
-        <div class="input-group">
-        <span class="input-group-addon">
-            <span class="glyphicon glyphicon-search"></span>
-        </span>
-        <input type="text" class="form-control" ng-model="main.searchInput">
-   
-    <p>{{main.searchInput}}</p>
-    </div>
-    <h3>A lost of TV shows</h3>
-    <ul class=""list-group">
-           <li class="list-group-item" ng-repeat="show in main.shows | filter:main.searchInput"><span class="glyphicon glyphicon-star" ng-if="show.favorite"></span> {{show.title}} <span class="badge">{{show.year}}</span></li>
-    </ul>      
-     </div>  
+<body data-ng-app="app">
+    <section id="main">
+        <div class="container">
+            <ng-view></ng-view>
+        </div>
+    </section>
 </body>
 </html>
