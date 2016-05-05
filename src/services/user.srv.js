@@ -1,7 +1,7 @@
 angular.module('app.services').factory('MyService', userService);
 
 
-function userService($http) {
+function userService($http, randomUserUrl) {
     var fac = {};
     var data = [
             {
@@ -32,7 +32,7 @@ function userService($http) {
      ];
     fac.getShows = function () {
          return $http({
-            'url': 'https://randomuser.me/api' ,
+            'url': randomUserUrl,
             'method':'get',
             'headers':{
                 'Content-type':'application/json'
