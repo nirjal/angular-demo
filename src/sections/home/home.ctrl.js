@@ -1,4 +1,7 @@
 angular.module('app.core').controller('HomeController',function(MyService){
     var vm = this;   
-    vm.shows = MyService.getShows();    
+    MyService.getUser().then(function(response){
+        vm.users = response;
+    });
+        
 });
