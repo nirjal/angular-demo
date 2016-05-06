@@ -1,7 +1,7 @@
 angular.module('app.services').factory('MyService', userService );
 
 
-function userService() {
+function userService($http, randomUserUrl) {
  var fac = {};  
     fac.getUser = function () {
          return $http({
