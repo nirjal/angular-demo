@@ -1,6 +1,6 @@
 # angular-demo
 
-To run this application, you need to have http-server installed. You can install it as a node packet
+To run this application, you need to have http-server installed. You can install it using node.
   
   $npm install http-server
 
