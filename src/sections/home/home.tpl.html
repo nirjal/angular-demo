@@ -9,3 +9,5 @@
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="show in home.shows | filter:home.searchInput"><span class="glyphicon glyphicon-star" ng-if="show.favorite"></span> {{show.title}} <span class="badge">{{show.year}}</span></li>
 </ul>
+
+<div standard-transclude><p>Some transcluded content.</p></div>
